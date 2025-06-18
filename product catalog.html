@@ -4,127 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Catalog</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <div>
-            <h1>Product Catalog</h1>
-            <ul>
-                <li><a href="#one">Electronics</a></li>
-                <li><a href="#two">Clothing</a></li>
-                <li><a href="#three">Home</a></li>
+    <header>
+        <h1>Product Catalog</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><button onclick="showCategory('electronics')">Electronics</button></li>
+                <li><button onclick="showCategory('clothing')">Clothing</button></li>
+                <li><button onclick="showCategory('home')">Home</button></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <div id="one">
+    <main>
+        <!-- Electronics -->
+        <section class="category" id="electronics">
             <h2>Electronics</h2>
-            <p><b>Laptop</b></p>
-            <p><b>Description:</b> High-Performance laptop with the latest processor and ample storage</p>
-            <p><b>Price:</b>$999.99</p>
-            <p><b>Availability:</b>In stock</p>
-            <img src="laptop.jpg" alt="Laptop Pic" height="150px" width="200px">
-            <br>
-            <br>
-            <a href="abcd.com">View Details</a>
-            <ul>
-                <li><b>Brand:</b> XYZ Electronics</li>
-                <li><b>Screen Size:</b> 15.6 inches</li>
-                <li><b>RAM:</b> 8GB</li>
-                <li><b>Storage:</b> 512GB SSD</li>
-            </ul>
-        </div>
 
-        <div>
-            <p><b>Smartphone</b></p>
-            <p><b>Description:</b> Feature-rich Smartphone with a high-resolution display and advanced camera.</p>
-            <p><b>Price:</b>$699.99</p>
-            <p><b>Availability:</b>Out of stock</p>
-            <img src="smartphone.webp" alt="Smartphone Pic" height="200px" width="200px">
-            <br>
-            <br>
-            <a href="abcd.com">View Details</a>
-            <ul>
-                <li><b>Brand:</b> Iphone 16 Pro Max</li>
-                <li><b>Screen Size:</b> 6.5 inches</li>
-                <li><b>Camera</b> 48MP + 12MP</li>
-                <li><b>Storage:</b> 128GB</li>
-            </ul>
-        </div>
+            <div class="product">
+                <img src="laptop.jpg" alt="Laptop">
+                <div>
+                    <h3>Laptop</h3>
+                    <p><b>Description:</b> High-performance laptop with latest processor and ample storage.</p>
+                    <p><b>Price:</b> $999.99</p>
+                    <p><b>Availability:</b> In stock</p>
+                    <a href="abcd.com">View Details</a>
+                    <ul>
+                        <li><b>Brand:</b> XYZ Electronics</li>
+                        <li><b>Screen Size:</b> 15.6 inches</li>
+                        <li><b>RAM:</b> 8GB</li>
+                        <li><b>Storage:</b> 512GB SSD</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div id="two">
+            <div class="product">
+                <img src="smartphone.webp" alt="Smartphone">
+                <div>
+                    <h3>Smartphone</h3>
+                    <p><b>Description:</b> Feature-rich smartphone with high-resolution display and camera.</p>
+                    <p><b>Price:</b> $699.99</p>
+                    <p><b>Availability:</b> Out of stock</p>
+                    <a href="abcd.com">View Details</a>
+                    <ul>
+                        <li><b>Brand:</b> iPhone 16 Pro Max</li>
+                        <li><b>Screen Size:</b> 6.5 inches</li>
+                        <li><b>Camera:</b> 48MP + 12MP</li>
+                        <li><b>Storage:</b> 128GB</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clothing -->
+        <section class="category" id="clothing">
             <h2>Clothing</h2>
-            <p><b>T-Shirt</b></p>
-            <p><b>Description:</b> Casual and comfortable t-shirt made from premium quality cotton.</p>
-            <p><b>Price:</b>$19.99</p>
-            <p><b>Availability:</b>In stock</p>
-            <img src="t-shirt.webp" alt="T-Shirt Pic" height="200px" width="220px">
-            <br>
-            <br>
-            <a href="abcd.com">View Details</a>
-            <ul>
-                <li><b>Brand:</b> Fashion Apparel</li>
-                <li><b>Color:</b> Black</li>
-                <li><b>Size:</b> S, M, L</li>
-                <li><b>Material:</b> 100% Cotton</li>
-            </ul>
-        </div>
 
-        <div>
-            <p><b>Jeans</b></p>
-            <p><b>Description:</b> Classic Jeans with a slim fit and stylish design</p>
-            <p><b>Price:</b>$49.99</p>
-            <p><b>Availability:</b>In stock</p>
-            <img src="jeans.webp" alt="Jeans Pic" height="250px" width="200px">
-            <br>
-            <br>
-            <a href="abcd.com">View Details</a>
-            <ul>
-                <li><b>Brand:</b> Denim Co.</li>
-                <li><b>Color:</b> Blue</li>
-                <li><b>Size:</b> 30, 32, 34</li>
-                <li><b>Material:</b> Denim</li>
-            </ul>
-        </div>
+            <div class="product">
+                <img src="t-shirt.webp" alt="T-Shirt">
+                <div>
+                    <h3>T-Shirt</h3>
+                    <p><b>Description:</b> Casual and comfortable premium cotton t-shirt.</p>
+                    <p><b>Price:</b> $19.99</p>
+                    <p><b>Availability:</b> In stock</p>
+                    <a href="abcd.com">View Details</a>
+                    <ul>
+                        <li><b>Brand:</b> Fashion Apparel</li>
+                        <li><b>Color:</b> Black</li>
+                        <li><b>Size:</b> S, M, L</li>
+                        <li><b>Material:</b> 100% Cotton</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div id="three">
+            <div class="product">
+                <img src="jeans.webp" alt="Jeans">
+                <div>
+                    <h3>Jeans</h3>
+                    <p><b>Description:</b> Classic slim fit jeans with stylish design.</p>
+                    <p><b>Price:</b> $49.99</p>
+                    <p><b>Availability:</b> In stock</p>
+                    <a href="abcd.com">View Details</a>
+                    <ul>
+                        <li><b>Brand:</b> Denim Co.</li>
+                        <li><b>Color:</b> Blue</li>
+                        <li><b>Size:</b> 30, 32, 34</li>
+                        <li><b>Material:</b> Denim</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home -->
+        <section class="category" id="home">
             <h2>Home</h2>
-            <p><b>Table Lamp</b></p>
-            <p><b>Description:</b> Modern and stylish table lamp to enhance your home decor.</p>
-            <p><b>Price:</b>$39.99</p>
-            <p><b>Availability:</b>In stock</p>
-            <img src="table lamp.jpg" alt="Table Lamp Pic" height="230px" width="200px">
-            <br>
-            <br>
-            <a href="abcd.com">View Details</a>
-            <ul>
-                <li><b>Brand:</b> Home Essentials</li>
-                <li><b>Color:</b> White</li>
-                <li><b>Dimensions:</b> 12 inches(height)</li>
-                <li><b>Material:</b> Ceramic, Metal</li>
-            </ul>
-        </div>
 
-        <div>
-            <p><b>Throw Pillow</b></p>
-            <p><b>Description:</b> Soft and comfortable throw pillow for your living room or bedroom</p>
-            <p><b>Price:</b>$24.99</p>
-            <p><b>Availability:</b>In stock</p>
-            <img src="throw pillow.jpg" alt="Throw Pillow Pic" height="200px" width="200px">
-            <br>
-            <br>
-            <a href="abcd.com">View Details</a>
-            <ul>
-                <li><b>Brand:</b> Cozy Home</li>
-                <li><b>Color:</b> Multi-Shaded</li>
-                <li><b>Dimensions:</b> 18 X 18 inches</li>
-                <li><b>Material:</b> Cotton, Polyester</li>
-            </ul>
-        </div>
+            <div class="product">
+                <img src="table lamp.jpg" alt="Table Lamp">
+                <div>
+                    <h3>Table Lamp</h3>
+                    <p><b>Description:</b> Stylish lamp to enhance home decor.</p>
+                    <p><b>Price:</b> $39.99</p>
+                    <p><b>Availability:</b> In stock</p>
+                    <a href="abcd.com">View Details</a>
+                    <ul>
+                        <li><b>Brand:</b> Home Essentials</li>
+                        <li><b>Color:</b> White</li>
+                        <li><b>Height:</b> 12 inches</li>
+                        <li><b>Material:</b> Ceramic, Metal</li>
+                    </ul>
+                </div>
+            </div>
 
-        <footer>
-            <p>&copy; 2023 Product Catalog. All rights reserved.</p>
-        </footer>
+            <div class="product">
+                <img src="throw pillow.jpg" alt="Throw Pillow">
+                <div>
+                    <h3>Throw Pillow</h3>
+                    <p><b>Description:</b> Soft and cozy throw pillow for any room.</p>
+                    <p><b>Price:</b> $24.99</p>
+                    <p><b>Availability:</b> In stock</p>
+                    <a href="abcd.com">View Details</a>
+                    <ul>
+                        <li><b>Brand:</b> Cozy Home</li>
+                        <li><b>Color:</b> Multi-Shaded</li>
+                        <li><b>Dimensions:</b> 18x18 inches</li>
+                        <li><b>Material:</b> Cotton, Polyester</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    </div>
+    <footer>
+        <p>&copy; 2023 Product Catalog. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
