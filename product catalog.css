@@ -102,3 +102,53 @@ footer {
     padding: 15px 0;
     margin-top: 30px;
 }
+
+.category-btn.active {
+    background-color: #999;
+}
+
+.product:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product img {
+        max-width: 90%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #searchInput {
+        width: 90%;
+    }
+}
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 20px;
+    padding: 10px 14px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#backToTop:hover {
+    background-color: #777;
+}
