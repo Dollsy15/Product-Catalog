@@ -1,3 +1,86 @@
+const productData = {
+  electronics: [
+    {
+      name: "MacBook",
+      image: "images/laptop.jpg",
+      description: "High-performance laptop with latest processor and ample storage.",
+      price: "$999.99",
+      availability: "In stock",
+      specs: [
+        "Brand: XYZ Electronics",
+        "Screen Size: 15.6 inches",
+        "RAM: 8GB",
+        "Storage: 512GB SSD"
+      ]
+    }
+  ],
+  clothing: [
+    {
+      name: "T-Shirt",
+      image: "images/t-shirt.webp",
+      description: "Casual and comfortable premium cotton t-shirt.",
+      price: "$19.99",
+      availability: "In stock",
+      specs: [
+        "Brand: Fashion Apparel",
+        "Color: Black",
+        "Size: S, M, L",
+        "Material: 100% Cotton"
+      ]
+    }
+  ],
+  home: [
+    {
+      name: "Table Lamp",
+      image: "images/table lamp.jpg",
+      description: "Stylish lamp to enhance home decor.",
+      price: "$39.99",
+      availability: "In stock",
+      specs: [
+        "Brand: Home Essentials",
+        "Color: White",
+        "Height: 12 inches",
+        "Material: Ceramic, Metal"
+      ]
+    }
+  ]
+};
+
+let cartCount = 0;
+
+function renderProducts(category) {
+  const section = document.getElementById(category);
+  section.innerHTML = `<h2>${capitalize(category)}</h2>`;
+
+  productData[category].forEach(product => {
+    const productHTML = `
+      <div class="product">
+        <img src="${product.image}" alt="${product.name}">
+        <div>
+          <h3>${product.name}</h3>
+          <p><b>Description:</b> ${product.description}</p>
+          <p><b>Price:</b> ${product.price}</p>
+          <p><b>Availability:</b> ${product.availability}</p>
+          <button onclick="addToCart()">Add to Cart</button>
+          <ul>
+            ${product.specs.map(spec => `<li><b>${spec}</b></li>`).join("")}
+          </ul>
+        </div>
+      </div>
+    `;
+    section.innerHTML += productHTML;
+  });
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function addToCart() {
+  cartCount++;
+  document.getElementById("cartCount").textContent = cartCount;
+}
+
 // 🔁 Show Selected Category
 function showCategory(categoryId) {
     const sections = document.querySelectorAll('.category');
